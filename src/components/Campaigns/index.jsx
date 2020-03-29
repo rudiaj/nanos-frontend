@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect, memo } from "react";
+import { useDispatch } from "react-redux";
 import axios from "axios";
 import styled from "styled-components";
 
-import { actions } from "../../constants";
+import { actions, paths } from "../../constants";
 import { List } from "./components";
 
 const Main = styled.main`
@@ -15,21 +15,21 @@ const Main = styled.main`
 const Campaigns = () => {
   const dispatch = useDispatch();
 
-  const getData = () => dispatch => {
-    dispatch({
+  const getData = () => dispatchProp => {
+    dispatchProp({
       type: actions.CAMPAIGNS_GET_REQUEST
     });
 
     axios
-      .get("http://localhost:4040/api/v1/campaigns")
+      .get(paths.api.CAMPAIGNS)
       .then(res =>
-        dispatch({
+        dispatchProp({
           type: actions.CAMPAIGNS_GET_SUCCESS,
           data: res.data
         })
       )
       .catch(() => {
-        dispatch({
+        dispatchProp({
           type: actions.CAMPAIGNS_GET_FAILURE
         });
       });
@@ -46,4 +46,4 @@ const Campaigns = () => {
   );
 };
 
-export default Campaigns;
+export default memo(Campaigns);

@@ -18,7 +18,7 @@ const List = () => {
   );
 
   const [isActive, setIsActive] = useState(false);
-  const [activePlatform, setActivePlatform] = useState(null);
+  const [activePlatform, setActivePlatform] = useState({});
 
   const openModal = platform => {
     setIsActive(prev => !prev);

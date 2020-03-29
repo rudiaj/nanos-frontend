@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 
 import Button from "./Button";
@@ -108,6 +107,17 @@ const ListItem = ({
       </Td>
     </tr>
   );
+};
+
+ListItem.propTypes = {
+  item: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    status: PropTypes.string.isRequired,
+    goal: PropTypes.string.isRequired,
+    total_budget: PropTypes.number.isRequired,
+    platforms: PropTypes.shape({}).isRequired
+  }).isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 export default memo(ListItem);

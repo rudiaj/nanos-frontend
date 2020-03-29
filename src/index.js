@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 
-import reset from "./reset.css";
+import "./reset.css";
 
 import { reducers } from "./store";
 import { GlobalStyles } from './utils';

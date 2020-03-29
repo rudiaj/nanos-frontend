@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const Icon = styled.i`
-  color: ${({ color }) => (color ? color : "#454F55")};
+  color: ${({ color }) => (color || "#454F55")};
   transform: ${({ rotate }) => (rotate ? "rotate(-30deg)" : "inherit")};
-  font-size: ${({ size }) => (size ? size : "1.5rem")};
+  font-size: ${({ size }) => (size || "1.5rem")};
   margin-right: 14px;
   &:last-of-type {
     margin-right: 0;

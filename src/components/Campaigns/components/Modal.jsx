@@ -2,6 +2,7 @@ import React, { memo } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import moment from "moment";
+import PropTypes from "prop-types";
 
 import Button from "./Button";
 import { Icon } from "./styled";
@@ -312,6 +313,12 @@ const Modal = ({ isActive, onClose, data }) => {
       )}
     </AnimatePresence>
   );
+};
+
+Modal.propTypes = {
+  isActive: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  data: PropTypes.shape({}).isRequired
 };
 
 export default memo(Modal);
