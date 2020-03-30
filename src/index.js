@@ -15,7 +15,7 @@ const store = createStore(reducers, applyMiddleware(thunk));
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-    <GlobalStyles />
+      <GlobalStyles />
       <App />
     </Provider>
   </React.StrictMode>,

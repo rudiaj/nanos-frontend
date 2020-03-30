@@ -9,6 +9,7 @@ const Icon = styled.i`
     margin-right: 0;
   }
 `;
+
 const Td = styled.td`
   padding: 40px 14px;
   vertical-align: middle;
