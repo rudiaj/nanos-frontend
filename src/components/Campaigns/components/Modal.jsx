@@ -148,7 +148,7 @@ const Modal = ({ isActive, onClose, data }) => {
                     </StyledTable>
                   </TableWrapper>
                   <TableWrapper>
-                    <Heading>Target audiance</Heading>
+                    <Heading>Target audience</Heading>
                     <StyledTable>
                       <tbody>
                         <tr>

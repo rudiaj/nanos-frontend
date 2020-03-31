@@ -1,3 +1,3 @@
 export default {
-  CAMPAIGNS: "http://localhost:4040/api/v1/campaigns"
+  CAMPAIGNS: "https://nanos-app.herokuapp.com/api/v1/campaigns"
 };
