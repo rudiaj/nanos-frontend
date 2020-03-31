@@ -21,7 +21,7 @@ const Overlay = styled(motion.div)`
   backdrop-filter: saturate(180%) blur(8px);
 `;
 
-const ContentWrapper = styled.div`
+const ContentWrapper = styled(motion.div)`
   overflow: hidden;
   border-radius: 10px;
   border-radius: 10px;
@@ -30,7 +30,7 @@ const ContentWrapper = styled.div`
   max-height: calc(100vh - 30px);
 `;
 
-const Content = styled(motion.div)`
+const Content = styled.div`
   min-height: 400px;
 `;
 
@@ -104,13 +104,13 @@ const Modal = ({ isActive, onClose, data }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <ContentWrapper>
-            <Content
-              key="modal"
-              initial={{ scale: 0.7, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.7, opacity: 0 }}
-            >
+          <ContentWrapper
+            key="modal"
+            initial={{ scale: 0.7, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.7, opacity: 0 }}
+          >
+            <Content>
               <ModalHeader>
                 <Button onClick={onClose}>
                   <Icon className="fas fa-times" />
