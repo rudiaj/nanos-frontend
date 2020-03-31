@@ -1,3 +1,3 @@
 export default {
-  CAMPAIGNS: "http://localhost:5000/api/v1/campaigns"
+  CAMPAIGNS: "http://localhost:4040/api/v1/campaigns"
 };
